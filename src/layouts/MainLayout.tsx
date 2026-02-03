@@ -7,10 +7,10 @@ interface MainLayoutProps {
 
 export default function MainLayout({ children }: MainLayoutProps) {
     return (
-        <div className="w-screen h-screen flex flex-row items-center justify-center">
+        <div className="w-screen h-screen flex flex-row items-center justify-center font-display">
             <SideNav />
             <div className="w-4/5 h-full bg-main-bg">
-                <main>
+                <main className="w-full h-full">
                     {children}
                 </main>
             </div>
