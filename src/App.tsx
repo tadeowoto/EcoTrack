@@ -1,19 +1,17 @@
 import MainLayout from "./layouts/MainLayout";
+import { useHabits } from "./hooks/useHabits";
 
 function App() {
+  const { habitList } = useHabits();
   return (
     <MainLayout>
       <main className="w-full h-full p-15 bg-main-bg flex flex-col items-start justify-center gap-10">
         <div className="w-full h-1/2">
           <h1 className="text-2xl font-semibold">Mis Habitos</h1>
           <ul className="flex flex-col gap-2">
-            <li>Todo 1</li>
-            <li> Todo 2</li>
-            <li> Todo 2</li>
-            <li> Todo 2</li>
-            <li> Todo 2</li>
-            <li> Todo 2</li>
-            <li> Todo 2</li>
+            {habitList.map((habit) => (
+              <li key={habit.id}>{habit.name}</li>
+            ))}
           </ul>
         </div>
         <div className="w-full h-1/2">
