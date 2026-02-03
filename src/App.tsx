@@ -1,11 +1,12 @@
+import MainLayout from "./layouts/MainLayout"
 
 
 function App() {
 
   return (
-    <div className="">
+    <MainLayout>
       <h1>EcoTrack</h1>
-    </div>
+    </MainLayout>
   )
 }
 
